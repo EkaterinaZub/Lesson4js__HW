@@ -40,8 +40,8 @@
 
 {
     let emptyArr = [];
-    result = 0;
-    
+    let result = 0;
+
     for (let i = 23; i <= 57; i++) {
         emptyArr.push(i);
         result += i
@@ -61,11 +61,53 @@
 }
 
 {
-    result = 0;
+    let result = 0;
     for (let i = 23; i <= 57; i++) {
-        
+
         result += i
     }
     console.log(result);
 
 }
+
+// task 4
+// Дан массив числами (строчного типа), например: [‘10’, ‘20’, ‘30’, ‘50’, ‘235’, ‘3000’].
+// Выведите на экран только те числа из массива, которые начинаются на цифру 1, 2 или
+// 5.
+
+{
+    let arr = [`10`, `20`, `30`, `50`, `235`, `3000`];
+
+    console.log(arr)
+
+
+    for (let i = 0; i < arr.length; i++) {
+        let num = String(arr[i]);
+        if (num[0] == 1 || num[0] == 2 || num[0] == 5) {
+            console.log(num);
+        }
+    }
+
+}
+
+//  task 5
+// Составьте массив дней недели (ПН, ВТ, СР и т.д.). С помощью цикла for выведите все
+// дни недели, а выходные дни выведите жирным.
+
+{
+    let arr=[`ПН`, `ВТ`, `СР`, `ЧТ`, `ПТ`, `СБ`, `ВС`]
+    
+    for (let i=0; i<arr.length; i++){
+                                           
+         if (arr[i] == `СБ` || arr[i]== `ВС`){
+
+            document.write(`<b>  ${arr[i]}  </b>`);
+        }
+        else{
+            document.write(` ${arr[i]} `);
+        }
+    }
+    
+    
+}
+
